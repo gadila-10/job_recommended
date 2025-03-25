@@ -11,7 +11,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Load the trained model
-model = pickle.load(open('model.pkl', 'wb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/')
 def home():
