@@ -9,7 +9,7 @@ app = Flask(__name__)
 job_tfidf_matrix = pickle.load(open("job_tfidf_matrix.pkl", "rb"))
 job_df = pickle.load(open("job_df.pkl", "rb"))
 edu_df = pickle.load(open("edu_df.pkl", "rb"))
-cosine = pickle.load(open("top_jobs.pkl", "rb"))
+cosine = pickle.load(open("top_job.pkl", "rb"))
 
 
 def recommend_jobs(applicant_id, top_n=5):
