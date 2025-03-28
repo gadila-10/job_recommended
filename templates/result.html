@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Recommended Jobs</h1>
+        {% if jobs %}
+            <table>
+                <tr>
+                    <th>Job Title</th>
+                    <th>Location</th>
+                    <th>Experience</th>
+                    <th>Skills</th>
+                </tr>
+                {% for job in jobs %}
+                <tr>
+                    <td>{{ job.jobTitle }}</td>
+                    <td>{{ job.location }}</td>
+                    <td>{{ job.minExp }} - {{ job.maxExp }} years</td>
+                    <td>{{ job.skills }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No job recommendations available.</p>
+        {% endif %}
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
