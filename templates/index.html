@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Job Recommendation System</h1>
+        <form action="/recommend" method="POST">
+            <label for="applicant_id">Enter Applicant ID:</label>
+            <input type="text" id="applicant_id" name="applicant_id" required>
+            <button type="submit">Find Jobs</button>
+        </form>
+    </div>
+</body>
+</html>
