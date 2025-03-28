@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Recommendations</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <div class="container">
@@ -27,7 +27,7 @@
                 {% endfor %}
             </table>
         {% else %}
-            <p>No job recommendations available.</p>
+            <p>No job recommendations found for your skills.</p>
         {% endif %}
         <a href="/">Go Back</a>
     </div>
